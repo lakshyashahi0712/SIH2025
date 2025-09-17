@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const LoginTeacher = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -53,7 +55,14 @@ const LoginTeacher = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Teacher login attempt:', formData)
-    // Add login logic here
+    
+    if (isLoginForm) {
+      // Navigate to teacher dashboard on login
+      navigate('/teacher/dashboard')
+    } else {
+      // Handle signup logic here
+      console.log('Teacher signup submission:', formData)
+    }
   }
 
   return (
