@@ -57,19 +57,19 @@ const LoginTeacher = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-16 px-4">
-      <div className="max-w-md w-full">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-lg w-full space-y-8">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="mx-auto h-16 w-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
-            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="text-center">
+          <div className="mx-auto h-14 w-14 sm:h-16 sm:w-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
+            <svg className="h-7 w-7 sm:h-8 sm:w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
           </div>
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
             {isLoginForm ? "Teacher Login" : "Apply as Teacher"}
           </h2>
-          <p className="text-gray-600">
+          <p className="text-sm sm:text-base text-gray-600 px-4">
             {isLoginForm 
               ? "Welcome back! Please sign in to your teaching account" 
               : "Join our teaching community and share your knowledge"
@@ -78,8 +78,8 @@ const LoginTeacher = () => {
         </div>
 
         {/* Login Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Email Field */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -97,7 +97,7 @@ const LoginTeacher = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  className="block w-full pl-10 pr-3 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-base"
                   placeholder="Enter your email"
                   required
                 />
@@ -121,7 +121,7 @@ const LoginTeacher = () => {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  className="block w-full pl-10 pr-12 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-base"
                   placeholder="Enter your password"
                   required
                 />
@@ -164,7 +164,7 @@ const LoginTeacher = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                      className="block w-full pl-10 pr-3 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-base"
                       placeholder="Enter your full name"
                       required
                     />
@@ -188,7 +188,7 @@ const LoginTeacher = () => {
                       name="universityCode"
                       value={formData.universityCode}
                       onChange={handleChange}
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                      className="block w-full pl-10 pr-3 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-base"
                       placeholder="Enter your university code"
                       required
                     />
@@ -242,13 +242,13 @@ const LoginTeacher = () => {
                       value={formData.otp}
                       onChange={handleChange}
                       maxLength="6"
-                      className="block w-full pl-10 pr-20 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                      className="block w-full pl-10 pr-20 sm:pr-24 py-3 sm:py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors text-base"
                       placeholder="Enter 6-digit OTP"
                       required
                     />
                     <button
                       type="button"
-                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm font-medium text-green-600 hover:text-green-500 transition-colors"
+                      className="absolute inset-y-0 right-0 pr-2 sm:pr-3 flex items-center text-xs sm:text-sm font-medium text-green-600 hover:text-green-500 transition-colors"
                     >
                       Send OTP
                     </button>
@@ -263,7 +263,7 @@ const LoginTeacher = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 sm:py-4 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300 text-sm sm:text-base"
             >
               {isLoginForm ? "Sign In as Teacher" : "Submit Application"}
             </button>
@@ -278,7 +278,7 @@ const LoginTeacher = () => {
           </div>
 
           {/* Toggle between Login/Signup */}
-          <div className="mt-6 p-4 bg-green-50 rounded-lg">
+          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-green-50 rounded-lg">
             <h3 className="text-sm font-medium text-green-800 mb-2">
               {isLoginForm ? "New to EduWatch?" : "Already have an account?"}
             </h3>
@@ -288,16 +288,15 @@ const LoginTeacher = () => {
                   setIsLoginForm(!isLoginForm)
                   resetForm() // Reset form state when toggling between login/signup
                 }}
-                className="block text-green-600 hover:text-green-500 transition-colors font-medium"
+                className="block text-green-600 hover:text-green-500 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-green-300 rounded p-1"
               >
                 {isLoginForm ? "• Apply to become a teacher" : "• Back to login"}
               </button>
-              
             </div>
           </div>
 
           {/* Back to Choice */}
-          <div className="mt-6 text-center">
+          <div className="mt-4 sm:mt-6 text-center px-4">
             <p className="text-sm text-gray-600">
               Want to join as a student instead?{' '}
               <a href="#" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
