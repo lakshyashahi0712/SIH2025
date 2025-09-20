@@ -7,7 +7,7 @@ const Choice = () => {
     return navigate("/teacher/login")
   }
   const handleStudent = () => {
-    return navigate("/student/dashboard")
+    return navigate("/student/login")
   }
 
   return (

@@ -6,7 +6,7 @@ const StudentDashboard = () => {
     name: "Arjun Sharma",
     rollNo: "CS21B001",
     class: "Class 12 - Science",
-    profileImage: "https://www.nuflowerfoods.com/wp-content/uploads/2024/09/person-dummy.jpg"
+    profileImage: "https://www.nuflowerfoods.com/wp-content/uploads/2024/09/person-dummy.jpgj"
   }
 
   // Dummy attendance data
